@@ -14,4 +14,5 @@ ullala is a demo that showcase using kafka as a data pipeline and log aggregatio
 6. Run Capturer: `KAFKA_HOSTS=KAFKA:9092 capturer/capturer.py`
 7. Install processor dependencies `cd processor && npm insall`
 8. Run processor: `cd processor && KAFKA_HOSTS=kafka:9092 node index.js`
-
+9. Install pusher dependencies `cd pusher && npm install`
+10. Run pusher `cd pusher && KAFKA_HOSTS=kafka:9092 node index.js

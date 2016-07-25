@@ -1,0 +1,27 @@
+{
+  "name": "pusher",
+  "version": "0.0.1",
+  "description": "Pushes processed images from kafka to browsers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "Alberto Avila",
+    "email": "albertoavila@gmail.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:albertein/pictofun.git"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "no-kafka": "^2.5.6",
+    "express": "^4.14.0",
+    "socket.io": "^1.4.8",
+    "avsc": "^4.1.6"
+  }
+}
