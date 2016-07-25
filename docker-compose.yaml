@@ -1,0 +1,39 @@
+version: '2'
+services:
+  elasticsearch:
+    image: elasticsearch:2.2.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes_from:
+      - data
+  kibana:
+    image: kibana:4.4.1
+    links:
+      - elasticsearch
+    environment:
+      ELASTICSEARCH_URL: "http://elasticsearch:9200"
+    ports:
+      - "5601:5601"
+  logstash:
+    build: logstash/
+    links:
+      - elasticsearch
+      - zookeeper
+      - kafka
+  zookeeper:
+    build: zookeeper/
+    ports:
+      - "2181:2181"
+    volumes_from:
+      - data
+  kafka:
+    build: kafka/
+    links:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    volumes_from:
+      - data
+  data:
+    build: data/
