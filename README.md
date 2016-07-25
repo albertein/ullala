@@ -12,3 +12,6 @@ ullala is a demo that showcase using kafka as a data pipeline and log aggregatio
 5. Symlink opencv into capturer, for mac you can run `scripts/symlink-opencv-bew.sh`
 6. Install capturer dependencies `pip install -r capturer/requirements.txt`
 6. Run Capturer: `KAFKA_HOSTS=KAFKA:9092 capturer/capturer.py`
+7. Install processor dependencies `cd processor && npm insall`
+8. Run processor: `cd processor && KAFKA_HOSTS=kafka:9092 node index.js`
+
