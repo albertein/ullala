@@ -1,0 +1,5 @@
+scipy
+simplecv
+pygame
+kafka-python
+avro

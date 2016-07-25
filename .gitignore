@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 kafka_2.11-0.10.0.0/
+cv.py
+cv2.so
+tmp.jpg
